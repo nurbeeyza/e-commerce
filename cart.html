@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exclusive E-Commerce Cart</title>
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="homepage-header">
+      <div class="homepage-header-container">
+        <div class="banner-text">
+          <h3 class="remove-banner-text">
+            Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+          </h3>
+          <a><u>ShopNow</u></a>
+        </div>
+
+        <div class="headline-dropdown">
+          <button id="btn-lang">
+            English
+            <i id="dropdown-icon" class="fa-solid fa-caret-down"></i>
+          </button>
+          <div id="hl-dropdown-content" class="hl-dropdown-content">
+            <a type="button" id="l1" onclick="changeLang('l1')" href=""
+              >Turkish</a
+            >
+            <a type="button" id="l2" onclick="changeLang('l2')" href=""
+              >French</a
+            >
+            <a type="button" id="l3" onclick="changeLang('l3')" href=""
+              >Chinese</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="top-bar">
+        <div class="left-side">
+          <div id="hamburger-bar-opened" class="hamburger-bar-contents">
+            <i id="hamburger-bar-closer" class="fa-solid fa-bars"></i>
+            <ul class="hamburger-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Sign Up</a></li>
+            </ul>
+          </div>
+          <i id="hamburger-bar" class="fa-solid fa-bars"></i>
+          <h2>Exclusive</h2>
+        </div>
+        <div class="middle-side">
+          <ul class="top-nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Sign Up</a></li>
+          </ul>
+        </div>
+        <div class="right-side">
+          <div class="search-bar">
+            <div class="search-bar-icon">
+              <input
+                id="user-input"
+                class="user-input"
+                type="text"
+                placeholder="Search.."
+              />
+              <i
+                id="search-icon"
+                class="fa-solid fa-magnifying-glass search-icon"
+                ;
+              ></i>
+            </div>
+            <div id="search-bar-results" class="search-bar-results"></div>
+          </div>
+          <div class="wishlist-icon-container">
+            <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+            <div
+              id="wishlist-quantity-identicator"
+              class="wishlist-quantity-identicator"
+            ></div>
+          </div>
+
+          <div class="cart-icon-container">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <div
+              id="cart-quantity-identicator"
+              class="cart-quantity-identicator"
+            ></div>
+          </div>
+
+          <!-- how to add icons without font awesome ? -->
+        </div>
+      </div>
+    </section>
+    <hr width="100%" />
+
+    <section>
+      <div class="cart-items-container">
+        <h4 class="items-header">Home / Cart</h4>
+        <div id="product-info-container" class="product-info-container">
+          <div class="product-info">
+            <h4 id="title">Product</h4>
+            <h4>Price</h4>
+            <h4>Quantity</h4>
+            <h4>Subtotal</h4>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <a href="index.html">
+            <button class="simple-action-button">Return to shop</button>
+          </a>
+          <button class="simple-action-button" onclick="updateCart()">
+            Update Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="coupon-cart-total">
+        <div class="coupon">
+          <input
+            id="coupon-input"
+            class="coupon-input"
+            type="text"
+            placeholder="Enter coupon code"
+          />
+          <button id="coupon-button" class="cart-action-button">
+            Apply Coupon
+          </button>
+          <h3 id="discount-message" class="discount-applied-message"></h3>
+        </div>
+
+        <div class="cart-total">
+          <h3>Cart Total</h3>
+          <div class="cart-total-item">
+            <h4>Subtotal</h4>
+            <h4 id="total-subtotal"></h4>
+          </div>
+          <div class="cart-total-item">
+            <h4>Shipping</h4>
+            <h4>Free</h4>
+          </div>
+          <div class="cart-total-item">
+            <h4>Total</h4>
+            <h4 id="total-subtotal-discounted"></h4>
+          </div>
+          <button class="checkout-button cart-action-button">
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="cart.js"></script>
+  </body>
+</html>

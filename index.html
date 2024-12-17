@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exclusive E-Commerce</title>
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Oruj - E-1 HEADER START -->
+    <section class="homepage-header">
+      <div class="homepage-header-container">
+        <div class="banner-text">
+          <h3 class="remove-banner-text">
+            Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+          </h3>
+          <a><u>ShopNow</u></a>
+        </div>
+
+        <div class="headline-dropdown">
+          <button id="btn-lang">
+            English
+            <i id="dropdown-icon" class="fa-solid fa-caret-down"></i>
+          </button>
+          <div id="hl-dropdown-content" class="hl-dropdown-content">
+            <a type="button" id="l1" onclick="changeLang('l1')" href=""
+              >Turkish</a
+            >
+            <a type="button" id="l2" onclick="changeLang('l2')" href=""
+              >French</a
+            >
+            <a type="button" id="l3" onclick="changeLang('l3')" href=""
+              >Chinese</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="top-bar">
+        <div class="left-side">
+          <div id="hamburger-bar-opened" class="hamburger-bar-contents">
+            <i id="hamburger-bar-closer" class="fa-solid fa-bars"></i>
+            <ul class="hamburger-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Sign Up</a></li>
+            </ul>
+          </div>
+          <i id="hamburger-bar" class="fa-solid fa-bars"></i>
+          <h2>Exclusive</h2>
+        </div>
+        <div class="middle-side">
+          <ul class="top-nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Sign Up</a></li>
+          </ul>
+        </div>
+        <div class="right-side">
+          <div class="search-bar">
+            <div class="search-bar-icon">
+              <input
+                id="user-input"
+                class="user-input"
+                type="text"
+                placeholder="Search.."
+              />
+              <i
+                id="search-icon"
+                class="fa-solid fa-magnifying-glass search-icon"
+                ;
+              ></i>
+            </div>
+            <div id="search-bar-results" class="search-bar-results"></div>
+          </div>
+          <!-- <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+          <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a> -->
+          <div class="wishlist-icon-container">
+            <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+            <div
+              id="wishlist-quantity-identicator"
+              class="wishlist-quantity-identicator"
+            ></div>
+          </div>
+
+          <div class="cart-icon-container">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <div
+              id="cart-quantity-identicator"
+              class="cart-quantity-identicator"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr width="100%" />
+
+    <section>
+      <div class="hero">
+        <div class="hero-categories">
+          <h4>Womans Fashion</h4>
+          <h4>Mens Fashion</h4>
+          <h4>Electronics</h4>
+          <h4>Home & Lifestyle</h4>
+          <h4>Medicine</h4>
+          <h4>Sports & Outdoor</h4>
+          <h4>Baby Toys</h4>
+          <h4>Groceries & Pets</h4>
+          <h4>Health & Beauty</h4>
+        </div>
+        <div class="vl"></div>
+        <div class="hero-carousell">
+          <div class="background-div">
+            <img
+              id="image1"
+              class="image1"
+              alt=""
+              src="/images/carousell-images/iphonee.svg"
+            />
+          </div>
+          <div class="small-buttons">
+            <button
+              onclick="imageChanger(1,'btn1')"
+              class="carousell-button"
+              id="btn1"
+            ></button>
+            <button
+              onclick="imageChanger(2,'btn2')"
+              class="carousell-button"
+              id="btn2"
+            ></button>
+            <button
+              onclick="imageChanger(3,'btn3')"
+              class="active-btn carousell-button"
+              id="btn3"
+            ></button>
+            <button
+              onclick="imageChanger(4,'btn4')"
+              class="carousell-button"
+              id="btn4"
+            ></button>
+            <button
+              onclick="imageChanger(5,'btn5')"
+              class="carousell-button"
+              id="btn5"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Oruj - E-1 HEADER END -->
+
+    <!-- Oruj Category browse -->
+    <div class="categories-container">
+      <div class="categories-header-2">
+        <div class="red-box"></div>
+        <h5>Categories</h5>
+      </div>
+
+      <div class="horizontal-container-1">
+        <h3>Browse By Category</h3>
+        <div class="category-buttons">
+          <button class="arrow-left">
+            <i class="fa-solid fa-xl fa-arrow-left"></i>
+          </button>
+          <button class="arrow-right">
+            <i class="fa-solid fa-xl fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div id="cat-container" class="horizontal-container-2"></div>
+    </div>
+    <hr />
+    <!-- Oruj Category browse End-->
+
+    <!-- Oruj Special Item Start -->
+    <secion>
+      <div class="special-item">
+        <div class="special-item-vertical">
+          <h4 class="special-header">Categories</h4>
+          <h3 id="special-item-content" class="special-content">
+            Special product of the Day!
+          </h3>
+          <div class="special-timer">
+            <div id="special-hours">24</div>
+            <div id="special-minutes">00</div>
+            <div id="special-seconds">00</div>
+          </div>
+          <button id="add-to-cart-button" class="action-button">
+            Buy Now!
+          </button>
+        </div>
+        <div class="special-image-container">
+          <img
+            src="images/gucci-perfume.png"
+            id="special-image"
+            class="special-img"
+          />
+        </div>
+      </div>
+    </secion>
+    <!-- Oruj Special Item End -->
+
+    <!-- SALIH BEST SELLING PRODUCTS  START -->
+    <div class="this-container">
+      <div class="thissymbol-text">
+        <div class="this-symbol"></div>
+        <div class="this-text-container">
+          <h3>This Month</h3>
+        </div>
+      </div>
+      <div class="best-selling">
+        <h3>Best Selling Products</h3>
+        <div class="best-button-container">
+          <button class="view-button" onclick="viewBestAll()">View All</button>
+        </div>
+      </div>
+    </div>
+    <div class="best-div" id="bestProducts"></div>
+    <!-- SALIH BEST SELLING PRODUCTS  END -->
+
+    <!-- Oruj Homepage-new-arrivals Start -->
+
+    <seciton>
+      <div class="homepage-new-arrivals">
+        <div class="categories-header-2">
+          <div class="red-box"></div>
+          <h5>Featured</h5>
+        </div>
+        <h3 class="header-h3-style">New Arrival</h3>
+        <div class="main-grid-container">
+          <div class="ps5">
+            <h4>PlayStation 5</h4>
+            <p>Black and White version of the PS5 coming out on sale.</p>
+            <h4>Shop Now</h4>
+          </div>
+          <div class="women-hat">
+            <h4>Womens Collections</h4>
+            <p>Featured woman collections that give you another vibe.</p>
+            <h4>Shop Now</h4>
+          </div>
+          <div class="speakers">
+            <h4>Speakers</h4>
+            <p>Amazon wireless speakers</p>
+            <h4>Shop Now</h4>
+          </div>
+          <div class="gucci">
+            <h4>Perfume</h4>
+            <p>GUCCI INTENSE OUD EDP</p>
+            <h4>Shop Now</h4>
+          </div>
+        </div>
+        <div class="we-deliver">
+          <div>
+            <img src="/images/services-1.svg" />
+            <h4>FREE AND FAST DELIVERY</h4>
+            <h3>Free delivery for all orders over $140</h3>
+          </div>
+          <div>
+            <img src="/images/services-2.svg" />
+            <h4>24/7 CUSTOMER SERVICE</h4>
+            <h3>Friendly 24/7 customer support</h3>
+          </div>
+          <div>
+            <img src="/images/services-3.svg" />
+            <h4>MONEY BACK GUARANTEE</h4>
+            <h3>We return money within 30 days</h3>
+          </div>
+        </div>
+      </div>
+    </seciton>
+    <!-- Oruj Homepage-new-arrivals End -->
+
+    <!-- SALIH HOMEPAGE EXPLORE PRODUCTS START -->
+    <div class="our-container">
+      <div class="oursymbol-text">
+        <div class="our-symbol"></div>
+        <div class="ourmini-text-container">
+          <h3>Our Products</h3>
+        </div>
+      </div>
+      <div class="explore-our">
+        <h3>Explore Our Products</h3>
+        <div class="back-next-button">
+          <button class="backbutton" onclick="backBtn()">&larr;</button>
+          <button class="nextbutton" onclick="nextBtn()">&rarr;</button>
+        </div>
+      </div>
+    </div>
+    <div class="explore-div" id="exploreProducts"></div>
+    <div class="view-button-container">
+      <button class="view-button" onclick="viewAll()">View All Products</button>
+    </div>
+    <!-- SALIH BEST SELLING PRODUCTS END  -->
+    <!-- SALIH FOOTER START   -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-1">
+          <h2 class="footer-h2">Exclusive</h2>
+          <p class="footer-h3">Subscribe</p>
+          <p>Get 10% off your first order</p>
+
+          <div class="email-box">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="email-input"
+            />
+            <button class="send-button">
+              <img src="images/icon-send.png" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="footer-2">
+          <p class="footer-h3">Support</p>
+          <p>
+            111 Bijoy sarani, Dhaka, <br />
+            DH 1515, Bangladesh.
+          </p>
+          <p>exclusive@gmail.com</p>
+          <p>+88015-8888-9999</p>
+        </div>
+
+        <div class="footer-3">
+          <p class="footer-h3">Account</p>
+          <a href="#">My Account</a>
+          <a href="">Login / Register</a>
+          <a href="">Cart</a>
+          <a href="">Wishlist</a>
+          <a href="">Shop</a>
+        </div>
+
+        <div class="footer-4">
+          <p class="footer-h3">Quick Link</p>
+          <a href="">Privacy Policy</a>
+          <a href="">Terms Of Use</a>
+          <a href="">FAQ</a>
+          <a href="">Contact</a>
+        </div>
+
+        <div class="footer-5">
+          <p class="footer-h3">Download App</p>
+          <p class="Download-p">Save $3 with App New User Only</p>
+          <img class="app-image" src="images/qrandplay.png" alt="" />
+          <img class="social-icon" src="images/social-icon.png" alt="" />
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="copyright">
+        <p class="copyright-p">Copyright Rimel 2022. All right reserved</p>
+      </div>
+    </footer>
+
+    <!-- SALIH FOOTER END   -->
+
+    <script src="app.js"></script>
+  </body>
+</html>

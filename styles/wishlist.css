@@ -1,0 +1,349 @@
+/* Oruj Wishlist Page */
+.homepage-header-container {
+  background-color: black;
+  color: white;
+  display: flex;
+  padding: 5px;
+  justify-content: space-around;
+}
+.banner-text {
+  display: flex;
+  margin-left: 10%;
+  /* HOW TO FIX THIS PROBLEM. I WANT THE BANNER TEXT TO BE IN THE CENTER OF THE SCREEN
+      AND I WANT THE LANGUAGE BUTTON TO BE ON FAR RIGHT WITH A RIGHT MARGIN. */
+  gap: 20px;
+}
+.banner-text h3 {
+  font-size: 14px;
+}
+
+.headline-dropdown {
+  position: relative;
+  margin-right: 9.4%;
+}
+
+.a {
+  height: 500px;
+  width: 100%;
+  color: black;
+}
+
+.hl-dropdown-content a {
+  background-color: rgb(184, 184, 184);
+  color: black;
+  display: block;
+  padding: 10px 5px;
+}
+
+.hl-dropdown-content {
+  display: none;
+  background-color: rgb(255, 255, 255);
+}
+
+.toggle-div {
+  background-color: rgb(246, 246, 246);
+  border: 1px solid black;
+  color: black;
+  display: flex !important;
+  position: absolute;
+  z-index: 3;
+  flex-direction: column;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-input {
+  padding: 6px;
+  width: 400px;
+  font-size: 17px;
+  border: 2px black solid;
+}
+
+.search-icon {
+  position: absolute;
+  margin-left: 80px;
+}
+
+.search-icon-invisible {
+  display: none !important;
+}
+
+.search-bar-results {
+  display: none;
+  /* IS THIS CORRECT */
+  background-color: rgb(218, 218, 218);
+  color: black;
+  font-size: 16px;
+  flex-direction: column;
+  justify-content: start;
+  align-content: start;
+  width: 400px;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.search-bar-icon {
+  display: flex;
+  align-items: center;
+}
+
+.text-results {
+  padding: 10px;
+  min-height: 40px;
+  overflow: hidden;
+  white-space: nowrap; /* Don't forget this one */
+  text-overflow: ellipsis;
+}
+
+.search-bar-visible {
+  display: flex !important;
+  margin-top: 41.5px;
+  position: absolute;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  max-width: 1300px;
+  position: relative;
+  z-index: 2;
+}
+
+.right-side {
+  flex: 2;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+
+.middle-side {
+  margin-left: 50px;
+  display: flex;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#hamburger-bar {
+  display: none;
+}
+
+.hamburger-bar-contents {
+  background-color: antiquewhite;
+  color: #000000;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  z-index: 3;
+}
+
+.hamburger-list li {
+  display: block;
+}
+
+.hamburger-bar-toggled {
+  transform: translateX(0);
+}
+
+.top-nav-list li {
+  display: inline;
+  padding-left: 20px;
+}
+
+/* Wishlist */
+.wishlist-main-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-and-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.move2cart-btn {
+  padding: 16px 48px;
+  border: 2px solid #a2a2a2;
+  background-color: rgb(252, 253, 254);
+  border-radius: 4px;
+}
+.wishlist-items-container {
+  display: grid;
+  /* grid-template-columns: repeat(4, 270px); */
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  width: 100%;
+  gap: 40px;
+  margin: 0 auto;
+  margin-top: 60px;
+  justify-items: center;
+}
+.wishlist-item {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start;
+  justify-content: flex-start; */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+#delete-icon {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+
+.wishlist-image-container {
+  display: flex;
+  /* border: 1px #c9c9c9 solid; */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.wishlist-image {
+  /* align-self: center; */
+  object-fit: contain;
+  max-width: 190px;
+  height: 210px;
+  padding: 20px 0;
+}
+
+.cart-add-button {
+  width: 100%;
+  min-height: 40px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 0px 0px 10px 10px;
+}
+.red-text {
+  font-size: 18px;
+  color: #db4444;
+}
+
+.wishlist-h4-title {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 8px 0px;
+  min-height: fit-content;
+  width: 100%;
+  /* padding: ; */
+}
+
+.cart-icon-container {
+  position: relative;
+}
+
+.cart-quantity-identicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #db4444;
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  top: -8px;
+  right: -8px;
+}
+
+.wishlist-icon-container {
+  position: relative;
+}
+
+.wishlist-quantity-identicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #db4444;
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  top: -8px;
+  right: -8px;
+}
+
+/* Wishlist */
+
+@media (max-width: 600px) {
+  .user-input {
+    width: 100%;
+  }
+  .search-bar {
+    width: 100%;
+  }
+  .search-bar-icon {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .right-side {
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1350px) {
+  .middle-side {
+    display: none;
+  }
+
+  .top-bar {
+    justify-content: space-between;
+  }
+
+  .right-side {
+    flex: 2;
+  }
+
+  #hamburger-bar {
+    display: inline;
+  }
+}
+/* Oruj Wishlist Page */
